@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poki 2.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Poki 2.0</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search games...">
+      <button id="cloak-btn" title="Disguise tab title">Tab Cloak</button>
+    </div>
+  </header>
+
+  <main id="grid" class="grid"></main>
+
+  <div id="player-modal" class="modal hidden">
+    <div class="modal-bar">
+      <span id="current-title">Playing Game</span>
+      <div>
+        <button id="fullscreen-btn">Fullscreen ⛶</button>
+        <button id="close-btn">Close ✕</button>
+      </div>
+    </div>
+    <iframe id="game-frame" src="" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    let allGames = [];
+    const grid = document.getElementById('grid');
+    const modal = document.getElementById('player-modal');
+    const frame = document.getElementById('game-frame');
+    const titleText = document.getElementById('current-title');
+
+    fetch('games.json')
+      .then(res => res.json())
+      .then(data => {
+        allGames = data;
+        render(allGames);
+      });
+
+    function render(items) {
+      grid.innerHTML = items.map(game => `
+        <div class="card" onclick="openGame('${game.url}', '${game.title}')">
+          <img src="${game.thumbnail}" alt="${game.title}">
+          <h3>${game.title}</h3>
+          <span>${game.category}</span>
+        </div>
+      `).join('');
+    }
+
+    document.getElementById('search').addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      render(allGames.filter(g => g.title.toLowerCase().includes(term)));
+    });
+
+    function openGame(url, title) {
+      frame.src = url;
+      titleText.textContent = title;
+      modal.classList.remove('hidden');
+    }
+
+    document.getElementById('close-btn').onclick = () => {
+      frame.src = '';
+      modal.classList.add('hidden');
+    };
+
+    document.getElementById('fullscreen-btn').onclick = () => {
+      if (frame.requestFullscreen) frame.requestFullscreen();
+    };
+
+    document.getElementById('cloak-btn').onclick = () => {
+      document.title = 'Google Docs';
+      alert('Tab title changed to Google Docs!');
+    };
+  </script>
+</body>
+</html>
