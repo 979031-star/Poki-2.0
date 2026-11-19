@@ -1,26 +1,5 @@
 [
   {
-    "id": "hextris",
-    "title": "Hextris",
-    "category": "Puzzle",
-    "thumbnail": "https://crazygames.com",
-    "url": "https://github.io"
-  },
-  {
-    "id": "2048",
-    "title": "2048",
-    "category": "Puzzle",
-    "thumbnail": "https://crazygames.com",
-    "url": "https://github.io"
-  },
-  {
-    "id": "slope",
-    "title": "Slope",
-    "category": "3D",
-    "thumbnail": "https://crazygames.com",
-    "url": "https://googleusercontent.com"
-  },
-  {
     "id": "drive-mad",
     "title": "Drive Mad",
     "category": "Driving",
