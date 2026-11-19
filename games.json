@@ -3,14 +3,14 @@
     "id": "2048",
     "title": "2048",
     "category": "Puzzle",
-    "thumbnail": "https://wikimedia.org",
-    "url": "https://github.io"
+    "user": "gabrielecirulli",
+    "repo": "2048"
   },
   {
     "id": "hextris",
     "title": "Hextris",
     "category": "Puzzle",
-    "thumbnail": "https://github.io",
-    "url": "https://github.io"
+    "user": "hextris",
+    "repo": "hextris"
   }
 ]
