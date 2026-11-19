@@ -1,5 +1,18 @@
-
 [
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "category": "Puzzle",
+    "thumbnail": "https://crazygames.com",
+    "url": "https://hextris.io"
+  },
+  {
+    "id": "2048",
+    "title": "2048",
+    "category": "Puzzle",
+    "thumbnail": "https://crazygames.com",
+    "url": "https://play2048.co"
+  },
   {
     "id": "slope",
     "title": "Slope",
