@@ -36,21 +36,22 @@
     const titleText = document.getElementById('current-title');
 
     fetch('games.json?v=' + Date.now())
-
-     .then(res => res.json())
+      .then(res => res.json())
       .then(data => {
         allGames = data;
         render(allGames);
       });
 
     function render(items) {
-      grid.innerHTML = items.map(game => `
-        <div class="card" onclick="openGame('${game.url}', '${game.title}')">
-          <img src="${game.thumbnail}" alt="${game.title}">
-          <h3>${game.title}</h3>
-          <span>${game.category}</span>
-        </div>
-      `).join('');
+      grid.innerHTML = items.map(game => {
+        const gameUrl = "https://" + game.user + ".github.io/" + game.repo + "/";
+        return `
+          <div class="card" onclick="openGame('${gameUrl}', '${game.title}')">
+            <h3>${game.title}</h3>
+            <span>${game.category}</span>
+          </div>
+        `;
+      }).join('');
     }
 
     document.getElementById('search').addEventListener('input', (e) => {
