@@ -35,8 +35,9 @@
     const frame = document.getElementById('game-frame');
     const titleText = document.getElementById('current-title');
 
-    fetch('games.json')
-      .then(res => res.json())
+    fetch('games.json?v=' + Date.now())
+
+     .then(res => res.json())
       .then(data => {
         allGames = data;
         render(allGames);
