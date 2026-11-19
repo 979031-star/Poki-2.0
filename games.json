@@ -1,17 +1,4 @@
-[
-  {
-    "title": "Hextris",
-    "category": "Arcade",
-    "thumbnail": "https://hextris.io",
-    "url": "https://hextris.io"
-  },
-  {
-    "title": "2048",
-    "category": "Puzzle",
-    "thumbnail": "https://play2048.co",
-    "url": "https://play2048.co"
-  }
-]
+
 [
   {
     "id": "slope",
