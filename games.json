@@ -1,23 +1,16 @@
 [
   {
-    "id": "drive-mad",
-    "title": "Drive Mad",
-    "category": "Driving",
-    "thumbnail": "https://crazygames.com",
+    "id": "2048",
+    "title": "2048",
+    "category": "Puzzle",
+    "thumbnail": "https://wikimedia.org",
     "url": "https://github.io"
   },
   {
     "id": "hextris",
     "title": "Hextris",
     "category": "Puzzle",
-    "thumbnail": "https://crazygames.com",
-    "url": "https://github.io"
-  },
-  {
-    "id": "2048",
-    "title": "2048",
-    "category": "Puzzle",
-    "thumbnail": "https://crazygames.com",
+    "thumbnail": "https://github.io",
     "url": "https://github.io"
   }
 ]
