@@ -5,5 +5,19 @@
     "category": "Driving",
     "thumbnail": "https://crazygames.com",
     "url": "https://github.io"
+  },
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "category": "Puzzle",
+    "thumbnail": "https://crazygames.com",
+    "url": "https://github.io"
+  },
+  {
+    "id": "2048",
+    "title": "2048",
+    "category": "Puzzle",
+    "thumbnail": "https://crazygames.com",
+    "url": "https://github.io"
   }
 ]
